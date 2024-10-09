@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity2">
+
+    <TextView
+        android:id="@+id/welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/welcome"
+        android:textSize="30sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"/>
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="wrap_content"
+        android:layout_height="300dp"
+        android:layout_below="@id/welcome"
+        android:contentDescription="@string/welcome"
+        android:src="@drawable/log"
+        android:layout_marginTop="16dp"
+        />
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/nameL"
+        style="@style/inputL"
+        android:layout_below="@id/img">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/name"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/inputname"
+            android:inputType="text"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="210dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/nameL"
+        android:text="@string/submit"
+        android:backgroundTint="@color/blue"
+        />
+    <Button
+        android:id="@+id/cancel"
+        android:layout_width="210dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/nameL"
+        android:layout_toEndOf="@id/submit"
+        android:text="@string/cancel"
+        android:backgroundTint="@color/red"/>
+
+
+</RelativeLayout>
